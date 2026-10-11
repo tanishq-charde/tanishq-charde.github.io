@@ -375,6 +375,17 @@ main .body .txt .org-teams li,main .body .txt .org-teams li *{text-align:left;hy
 .hero-links .cvbtn:hover span,.contact .cvbtn:hover span{border-bottom-color:currentColor}
 .cvpage{display:block;width:100%;height:auto;border:1px solid var(--line);background:#fff;margin-top:1rem}
 .nw{white-space:nowrap}
+svg.dia{width:100%;height:auto;display:block;font-family:var(--font)}
+svg.dia .nac{fill:var(--navy)}svg.dia .spin{fill:#33466F}svg.dia .plane{stroke:#B8452F;stroke-width:2;stroke-dasharray:6 4}
+svg.dia .lead{stroke:var(--muted);stroke-width:1}svg.dia .fl path{stroke:#5C6E96;stroke-width:1.6;fill:none}
+svg.dia .arcp{fill:none;stroke:var(--navy);stroke-width:1.2}svg.dia .sep{fill:#B8452F;opacity:.28}
+svg.dia .lab{font-size:15px;fill:var(--text)}svg.dia .labb{font-size:20px;font-weight:700;fill:var(--navy)}
+svg.dia .eq{font-size:16px;fill:var(--navy);font-style:italic}svg.dia .ring{fill:var(--panel);stroke:var(--navy);stroke-width:1.5}
+svg.dia .hub{fill:#fff;stroke:var(--navy);stroke-width:1.2}svg.dia .sector{fill:var(--navy);opacity:.82}
+svg.dia .fillnavy{fill:var(--navy)}svg.dia .box rect{fill:var(--panel);stroke:var(--navy);stroke-width:1.3}svg.dia .box rect.dark{fill:var(--navy)}
+svg.dia .arw line{stroke:var(--navy);stroke-width:1.5}svg.dia .bt{font-size:16px;font-weight:700;fill:var(--navy)}svg.dia .bs{font-size:13px;fill:var(--text)}svg.dia .w{fill:#FBF8EF}
+ul.refs li{text-align:left}
+@media (max-width:760px){figure.drawing:has(svg.dia){overflow-x:auto}svg.dia{min-width:560px}}
 </style>
 </head>
 <body>
@@ -428,7 +439,7 @@ main .body .txt .org-teams li,main .body .txt .org-teams li *{text-align:left;hy
 <section id="projects">
 <h2>Projects</h2>
 <ul class="plist">
-<li><a href="#p/msc-thesis"><span><span class="pt">Short intake aerodynamics at high incidence</span><span class="pd">MSc thesis in the <span class="nw">Rolls-Royce</span> UTC, correlating CFD against SPIV measurements.</span></span><span class="pside"><span class="pdate">Oct 2024 to Sep 2025</span><span class="tools">CFD, SPIV&nbsp;correlation, Python&nbsp;post&#8209;processing</span></span></a></li>
+<li><a href="#p/msc-thesis"><span><span class="pt">Short intake aerodynamics at high incidence</span><span class="pd">MSc research in the <span class="nw">Rolls-Royce</span> UTC: evaluating CFD turbulence models against NIFTI stereo PIV data for short intakes at high incidence.</span> UTC, correlating CFD against SPIV measurements.</span></span><span class="pside"><span class="pdate">Oct 2024 to Sep 2025</span><span class="tools">ANSYS&nbsp;Fluent, Python, Tecplot, HPC</span></span></a></li>
 <li><a href="#p/engine-systems-symposium"><span><span class="pt">62nd Engine Systems Symposium</span><span class="pd">Paper and talk on supersonic intakes, and directing the <span class="nw">20-person</span> team that ran the <span class="nw">two-day</span> event.</span></span><span class="pside"><span class="pdate">Nov 2024 to Mar 2025</span><span class="tools">Leadership, Word, Excel, PowerPoint, Teams</span></span></a></li>
 <li><a href="#p/handley-page-wind-tunnel"><span><span class="pt">Flow quality of the Handley Page wind tunnel</span><span class="pd"><span class="nw">Final-year</span> experimental project: mapping flow angle and wall boundary layers in a 2.1 m by 1.5 m test section.</span></span><span class="pside"><span class="pdate">Sep 2023 to Jun 2024</span><span class="tools">Wind&nbsp;tunnel&nbsp;testing, MATLAB, Fusion&nbsp;360, Siemens&nbsp;Solid&nbsp;Edge</span></span></a></li>
 <li><a href="#p/sudden-expansion-cfd"><span><span class="pt">Laminar flow through a sudden pipe expansion</span><span class="pd">Individual CFD study: mesh independence, convergence and validation against PIV measurements.</span></span><span class="pside"><span class="pdate">Jan to Apr 2024</span><span class="tools"><span class="nw">STAR-CCM</span>+, MATLAB, Fusion&nbsp;360, Siemens&nbsp;Solid&nbsp;Edge</span></span></a></li>
@@ -465,13 +476,76 @@ main .body .txt .org-teams li,main .body .txt .org-teams li *{text-align:left;hy
 </section>
 <section class="view wrap" data-view="msc-thesis" hidden>
 <nav class="projnav projnav-top" aria-label="Project navigation"><a class="pn-prev" href="#p/hydrogen-airliner"><span class="pn-dir"><span aria-hidden="true">←</span> Previous project</span><span class="pn-t">Hydrogen Highlander Express</span></a><a class="pn-home" href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-7 9 7M5 10v10h5v-6h4v6h5V10"/></svg>Home</a><a class="pn-next" href="#p/engine-systems-symposium"><span class="pn-dir">Next project <span aria-hidden="true">→</span></span><span class="pn-t">62nd Engine Systems Symposium</span></a></nav>
-<div class="phead"><h1>Short intake aerodynamics at high incidence</h1><p class="lede">An MSc thesis at Cranfield, carried out within the <span class="nw">Rolls-Royce</span> University Technology Centre as part of the NIFTI programme. The study examined how a short engine intake behaves at high incidence, and how well CFD predicts it when checked against stereo PIV measurements.</p><dl class="meta"><div><dt>Where</dt><dd>Cranfield University, <span class="nw">Rolls-Royce</span> UTC</dd></div><div><dt>When</dt><dd>October 2024 to September 2025</dd></div><div><dt>Programme</dt><dd>NIFTI</dd></div><div><dt>Role</dt><dd>Meshing, <span class="nw">set-up</span>, solving, <span class="nw">post-processing</span> and validation</dd></div><div><dt>Tools</dt><dd><span class="fill">solver and mesher used</span></dd></div></dl></div>
-<div class="body"><h2>The problem</h2><div class="txt"><p>Future <span class="nw">ultra-high-bypass</span> engines want shorter, lighter nacelles to cut weight and drag. The catch is that a short intake has less length to recover from a disturbed flow, so at high incidence, such as <span class="nw">take-off</span> rotation or a crosswind, it is more prone to separation and distortion at the fan face.</p>
-<p>The question was how well CFD captures that behaviour, and where it starts to disagree with experiment.</p></div><h2>Method</h2><div class="txt"><p>The intake geometry was supplied. The work covered everything downstream of that:</p>
-<ul><li>building the mesh and checking mesh sensitivity</li><li>setting boundary conditions to match the test conditions</li><li>solver <span class="nw">set-up</span> and running the cases, using <span class="fill">turbulence model(s)</span></li><li><span class="nw">post-processing</span> the results in Python and comparing them against SPIV data</li></ul></div><h2>Results</h2><div class="txt"><figure><div class="slot">Add figure: CFD vs SPIV comparison at the measurement plane</div><figcaption><span class="fill">One sentence on what this comparison shows.</span></figcaption></figure>
-<figure><div class="slot">Add figure: flow field at high incidence (e.g. Mach or total pressure contour)</div><figcaption><span class="fill">One sentence on what this shows.</span></figcaption></figure>
-<p><span class="fill">Two or three sentences on the main finding: where CFD agreed with experiment, where it didn't, and why.</span></p>
-<p class="note">This work was done within the <span class="nw">Rolls-Royce</span> UTC. Only material cleared for release is shown here; the rest can be discussed in more detail at interview.</p></div><h2>Lessons learnt</h2><div class="txt"><span class="fill">What you'd do differently, or the most useful thing this taught you, e.g. about validating CFD against experiment.</span></div></div>
+<div class="phead"><h1>Short intake aerodynamics at high incidence</h1><p class="lede">An MSc research project within the <span class="nw">Rolls-Royce</span> University Technology Centre at Cranfield, using stereo PIV data from the <span class="nw">EU-funded</span> NIFTI programme. The work evaluated how well different CFD turbulence modelling approaches predict the flow inside an <span class="nw">ultra-short</span> nacelle intake at high angles of incidence, where the flow can separate from the lip and distort the air arriving at the fan.</p><dl class="meta"><div><dt>Where</dt><dd>Cranfield University, <span class="nw">Rolls-Royce</span> UTC</dd></div><div><dt>When</dt><dd>October 2024 to September 2025</dd></div><div><dt>Programme</dt><dd>NIFTI, EU Horizon 2020 (Clean Sky 2)</dd></div><div><dt>Tools</dt><dd>ANSYS Fluent, Python, Tecplot, MATLAB, HPC</dd></div><div class="wide"><dt>Skills</dt><dd>CFD simulation, turbulence modelling, flow distortion analysis, propulsion integration, validation against wind tunnel data, data <span class="nw">post-processing</span> and automation, spectral analysis, technical report writing</dd></div></dl>
+<ul class="stats">
+<li><strong>30,000+</strong><span>CFD and SPIV data files processed through automated Python workflows</span></li>
+<li><strong>75%</strong><span>faster analysis from automating the distortion calculations</span></li>
+<li><strong>5</strong><span>turbulence modelling approaches compared: SA, <span class="nw">k-ω</span> SST, γ-Reθ SST, URANS and SAS</span></li>
+<li><strong>1.5 mm</strong><span>vector pitch of the NIFTI SPIV measurements at the fan plane</span></li>
+</ul></div>
+<div class="body"><h2>The problem</h2><div class="txt"><p>Future <span class="nw">ultra-high-bypass-ratio</span> engines have larger fans, and to keep weight and drag down their nacelles have to get shorter. A short intake has less length to recover from a disturbed flow. At high angles of incidence, during <span class="nw">take-off</span> rotation, climb or in crosswind, the flow around the lower lip can separate, and the fan then sees a <span class="nw">non-uniform</span>, swirling and unsteady flow. That distortion reduces the fan's stability margin and has to be predicted reliably at the design stage.</p>
+<p>The NIFTI programme measured this flow directly. Using an automated <span class="nw">multi-camera</span> stereo PIV system in an industrial wind tunnel, it captured the velocity field across the intake at the plane where the fan would sit, at far higher resolution than the traditional rakes of pressure probes. The question for this project was how well CFD reproduces those measurements, and which turbulence modelling approach should be trusted for short intake design.</p>
+<figure class="drawing"><svg class="dia" viewBox="0 0 720 300" role="img" aria-label="Schematic of a short intake at high incidence: the freestream approaches at an angle, the flow can separate inside the lower lip, and the measurement plane sits just upstream of where the fan would be"><defs><marker id="ar1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="fillnavy"/></marker></defs>
+<path class="nac" d="M300 70 C 330 56, 420 52, 560 60 L 600 64 L 600 82 L 560 86 C 450 84, 360 88, 318 96 C 296 100, 288 84, 300 70 Z"/>
+<path class="nac" d="M300 230 C 330 244, 420 248, 560 240 L 600 236 L 600 218 L 560 214 C 450 216, 360 212, 318 204 C 296 200, 288 216, 300 230 Z"/>
+<path class="spin" d="M600 118 C 570 122, 560 150, 600 182 Z"/>
+<line class="plane" x1="545" y1="80" x2="545" y2="220"/>
+<text x="545" y="270" class="lab" text-anchor="middle">Measurement plane (fan face)</text>
+<line x1="545" y1="226" x2="545" y2="256" class="lead"/>
+<g class="fl"><path d="M60 230 L 270 150" marker-end="url(#ar1)"/><path d="M60 270 L 285 186" marker-end="url(#ar1)"/><path d="M60 190 L 260 115" marker-end="url(#ar1)"/></g>
+<line x1="60" y1="270" x2="230" y2="270" class="lead"/><path class="arcp" d="M180 270 A 120 120 0 0 0 172 228"/>
+<text x="188" y="258" class="lab">α</text>
+<text x="40" y="70" class="lab">Freestream at</text><text x="40" y="88" class="lab">high incidence</text>
+<path class="sep" d="M318 204 C 360 190, 420 186, 470 196 C 440 206, 380 210, 330 208 Z"/>
+<text x="360" y="182" class="lab">Possible lip separation</text>
+<text x="360" y="40" class="lab">Short nacelle (L/D ≈ 0.3–0.4)</text>
+</svg><figcaption>A short intake at high incidence. The air has to turn sharply around the lower lip, and the distortion it produces is measured at the plane where the fan sits. Illustrative only, not to scale.</figcaption></figure>
+</div>
+<h2>Method</h2><div class="txt">
+<ul>
+<li><strong>Experimental reference.</strong> <span class="nw">High-resolution</span> SPIV data from the <span class="nw">NIFTI-LST</span> test campaign were used as the benchmark, covering a range of incidences and intake mass flows.</li>
+<li><strong>CFD.</strong> Simulations were set up and run in ANSYS Fluent on HPC across varying <span class="nw">mass-flow</span> and inflow conditions. Three steady RANS models were compared, <span class="nw">Spalart-Allmaras</span>, <span class="nw">k-ω</span> SST and the γ-Reθ SST transition model, alongside unsteady URANS and Scale Adaptive Simulation (SAS), which resolves part of the turbulent unsteadiness instead of modelling all of it.</li>
+<li><strong>Flow features assessed.</strong> The onset of <span class="nw">boundary-layer</span> separation at the lip, hysteresis between increasing and decreasing incidence, swirl, and <span class="nw">fan-face</span> distortion through the <span class="nw">industry-standard</span> DC60 and SC60 descriptors.</li>
+<li><strong><span class="nw">Post-processing</span>.</strong> Python scripts mapped the CFD and SPIV fields onto a common grid using <span class="nw">Delaunay-based</span> interpolation, calculated the distortion metrics automatically, and used FFT and DFT spectral analysis to examine the unsteady content, with Tecplot and MATLAB for visualisation. The pipeline handled more than 30,000 data files and cut analysis time by 75%.</li>
+<li><strong>Validation.</strong> CFD predictions were compared against the wind tunnel measurements to establish where each modelling approach held up and where it did not, leading to recommendations on turbulence model selection for short intake design.</li>
+</ul>
+<figure class="drawing"><svg class="dia" viewBox="0 0 720 300" role="img" aria-label="Fan-face distortion descriptors: a circular fan face with a shaded 60-degree sector, with the definitions of DC60 and SC60"><circle cx="160" cy="150" r="110" class="ring"/><path class="sector" d="M160 150 L 270 150 A 110 110 0 0 1 215 245.3 Z"/><circle cx="160" cy="150" r="30" class="hub"/>
+<path class="arcp" d="M230 150 A 70 70 0 0 1 195 210.6"/><text x="236" y="196" class="lab" style="fill:#FBF8EF">60°</text>
+<text x="160" y="290" class="lab" text-anchor="middle">Fan face, looking downstream</text>
+<text x="330" y="80" class="labb">DC60</text>
+<text x="330" y="104" class="lab">Total-pressure distortion: how far the worst</text>
+<text x="330" y="124" class="lab">60° sector falls below the face average.</text>
+<text x="330" y="150" class="eq">DC60 = (P̄ₜ − P̄ₜ,₆₀ min) / q̄</text>
+<text x="330" y="200" class="labb">SC60</text>
+<text x="330" y="224" class="lab">Swirl distortion: the strongest mean</text>
+<text x="330" y="244" class="lab">circumferential velocity in any 60° sector.</text>
+<text x="330" y="270" class="eq">SC60 = max(V̄θ,₆₀) / V̄ₓ</text></svg><figcaption>The two standard <span class="nw">fan-face</span> distortion descriptors used to compare CFD and experiment. Both are evaluated by sweeping a 60° sector around the fan face and keeping the worst case.</figcaption></figure>
+<figure class="drawing"><svg class="dia" viewBox="0 0 720 150" role="img" aria-label="Post-processing pipeline: CFD and SPIV data, Delaunay interpolation to a common grid, automated DC60 and SC60 and FFT analysis, comparison and model recommendations"><defs><marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="fillnavy"/></marker></defs>
+<g class="box"><rect x="2" y="35" width="160" height="80"/><rect x="186" y="35" width="166" height="80"/><rect x="376" y="35" width="166" height="80"/><rect x="566" y="35" width="152" height="80" class="dark"/></g>
+<g class="arw"><line x1="162" y1="75" x2="184" y2="75" marker-end="url(#ar2)"/><line x1="352" y1="75" x2="374" y2="75" marker-end="url(#ar2)"/><line x1="542" y1="75" x2="564" y2="75" marker-end="url(#ar2)"/></g>
+<text x="82" y="68" class="bt" text-anchor="middle">CFD + SPIV</text><text x="82" y="90" class="bs" text-anchor="middle">30,000+ files</text>
+<text x="269" y="68" class="bt" text-anchor="middle">Common grid</text><text x="269" y="90" class="bs" text-anchor="middle">Delaunay interpolation</text>
+<text x="459" y="68" class="bt" text-anchor="middle">Automated metrics</text><text x="459" y="90" class="bs" text-anchor="middle">DC60, SC60, FFT/DFT</text>
+<text x="642" y="68" class="bt w" text-anchor="middle">Comparison</text><text x="642" y="90" class="bs w" text-anchor="middle">model guidance</text></svg><figcaption>The automated <span class="nw">post-processing</span> workflow, written in Python with Tecplot and MATLAB for visualisation.</figcaption></figure>
+</div>
+<h2>Results</h2><div class="txt">
+<p class="note">This research was carried out within the <span class="nw">Rolls-Royce</span> University Technology Centre under a <span class="nw">non-disclosure</span> agreement, so specific results, comparisons and findings cannot be shown here. They can be discussed in general terms at interview.</p>
+<p>The outcome was a set of recommendations on which turbulence modelling approach to use for short intake aerodynamics at high incidence, contributing to better CFD fidelity for engine and airframe integration.</p>
+</div>
+<h2>Related NIFTI publications</h2><div class="txt">
+<p>The public literature from the NIFTI programme, which gives the context and the measurement technique behind this work:</p>
+<ul class="refs">
+<li>Kempaiah, K. U., Piovesan, T., Zachos, P. K., <em>et al.</em> (2023). <span class="nw">High-resolution</span> turbofan intake flow characterization by automated <span class="nw">stereoscopic-PIV</span> in an industrial wind tunnel environment. <em>Measurement Science and Technology</em>. <a href="https://doi.org/10.1088/1361-6501/ad0ea0" target="_blank" rel="noopener">doi:10.1088/<span class="nw">1361-6501</span>/ad0ea0</a> (open access)</li>
+<li>Piovesan, T., <em>et al.</em> Unsteady swirl distortion in a short intake under crosswind conditions. <em>AIAA Journal</em>. <a href="https://doi.org/10.2514/1.J064226" target="_blank" rel="noopener">doi:10.2514/1.J064226</a></li>
+<li>Piovesan, T., Zhang, W., Vahdati, M. and Zachos, P. K. (2022). Investigations of the unsteady aerodynamic characteristics for intakes at crosswind. <em>ASME Turbo Expo 2022</em>. <a href="https://doi.org/10.1115/GT2022-82149" target="_blank" rel="noopener">doi:10.1115/<span class="nw">GT2022-82149</span></a></li>
+<li>Zhang, W., Tiedemann, B., Hegen, S., Vahdati, M., Zhao, F. and Zachos, P. (2021). NIFTI: <span class="nw">de-risking</span> the test campaigns with CFD analysis. <em>GPPS Forum</em>. <a href="https://doi.org/10.33737/gpps21-tc-316" target="_blank" rel="noopener">doi:10.33737/<span class="nw">gpps21-tc-316</span></a></li>
+<li>Project page: <a href="https://www.cranfield.ac.uk/research-projects/nifti" target="_blank" rel="noopener">NIFTI at Cranfield University</a></li>
+</ul></div>
+<h2>Lessons learnt</h2><div class="txt">
+<p>Validating CFD against measurements at this resolution changes the question from "does the model match?" to "where, and why not?". Thousands of vectors per plane expose differences that a handful of pressure probes would never show, so the comparison has to be planned as carefully as the simulations themselves.</p>
+<p>Automating the data handling early paid off more than any single simulation. Once every case flowed through the same interpolation and metric scripts, the comparisons were consistent, repeatable and fast enough to explore far more conditions than a manual workflow would allow.</p>
+</div></div>
+
 <nav class="projnav projnav-bottom" aria-label="Project navigation"><a class="pn-prev" href="#p/hydrogen-airliner"><span class="pn-dir"><span aria-hidden="true">←</span> Previous project</span><span class="pn-t">Hydrogen Highlander Express</span></a><a class="pn-home" href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-7 9 7M5 10v10h5v-6h4v6h5V10"/></svg>Home</a><a class="pn-next" href="#p/engine-systems-symposium"><span class="pn-dir">Next project <span aria-hidden="true">→</span></span><span class="pn-t">62nd Engine Systems Symposium</span></a></nav>
 </section><section class="view wrap" data-view="engine-systems-symposium" hidden>
 <nav class="projnav projnav-top" aria-label="Project navigation"><a class="pn-prev" href="#p/msc-thesis"><span class="pn-dir"><span aria-hidden="true">←</span> Previous project</span><span class="pn-t">Short intake aerodynamics at high incidence</span></a><a class="pn-home" href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-7 9 7M5 10v10h5v-6h4v6h5V10"/></svg>Home</a><a class="pn-next" href="#p/handley-page-wind-tunnel"><span class="pn-dir">Next project <span aria-hidden="true">→</span></span><span class="pn-t">Flow quality of the Handley Page wind tunnel</span></a></nav>
