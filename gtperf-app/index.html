@@ -7,12 +7,12 @@
 <meta name="description" content="GTPerf, a gas turbine performance toolkit, running in your browser: engine model, site performance, part load and emissions, pass-off test, fleet monitoring and turbofan studies.">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@stlite/browser@1.12.0/build/stlite.css">
 <style>
-html,body{margin:0;background:#fff}
-#boot{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;font-family:'Helvetica Neue',Arial,sans-serif;color:#14294b;text-align:center;padding:1.5rem;background:#fff;z-index:10}
+html,body{margin:0;background:#FBF8EF}
+#boot{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;font-family:'Helvetica Neue',Arial,sans-serif;color:#12224A;text-align:center;padding:1.5rem;background:#FBF8EF;z-index:10}
 #boot p{margin:0;max-width:34rem;color:#5b6270;line-height:1.5}
-#boot a{color:#14294b}
-#boot .bar{width:min(320px,80vw);height:4px;background:#d9dce1;overflow:hidden;border-radius:2px}
-#boot .bar span{display:block;height:100%;width:40%;background:#2a78d6;animation:slide 1.4s ease-in-out infinite}
+#boot a{color:#12224A}
+#boot .bar{width:min(320px,80vw);height:4px;background:#DDD5BF;overflow:hidden;border-radius:2px}
+#boot .bar span{display:block;height:100%;width:40%;background:#12224A;animation:slide 1.4s ease-in-out infinite}
 @keyframes slide{0%{transform:translateX(-100%)}100%{transform:translateX(250%)}}
 </style>
 </head>
@@ -55,6 +55,10 @@ const controller = mount(
     streamlitConfig: {
       "client.toolbarMode": "viewer",
       "theme.base": "light",
+      "theme.primaryColor": "#12224A",
+      "theme.backgroundColor": "#FBF8EF",
+      "theme.secondaryBackgroundColor": "#F3EDDC",
+      "theme.textColor": "#26314A",
     },
   },
   document.getElementById("root"),
