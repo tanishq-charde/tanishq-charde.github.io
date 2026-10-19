@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>GTPerf GUI (beta) | Tanishq Charde</title>
+<meta name="description" content="GTPerf, a gas turbine performance toolkit, running in your browser: engine model, site performance, part load and emissions, pass-off test, fleet monitoring and turbofan studies.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@stlite/browser@1.12.0/build/stlite.css">
+<style>
+html,body{margin:0;background:#fff}
+#boot{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;font-family:'Helvetica Neue',Arial,sans-serif;color:#14294b;text-align:center;padding:1.5rem;background:#fff;z-index:10}
+#boot p{margin:0;max-width:34rem;color:#5b6270;line-height:1.5}
+#boot a{color:#14294b}
+#boot .bar{width:min(320px,80vw);height:4px;background:#d9dce1;overflow:hidden;border-radius:2px}
+#boot .bar span{display:block;height:100%;width:40%;background:#2a78d6;animation:slide 1.4s ease-in-out infinite}
+@keyframes slide{0%{transform:translateX(-100%)}100%{transform:translateX(250%)}}
+</style>
+</head>
+<body>
+<div id="boot" aria-live="polite">
+  <strong>Loading GTPerf</strong>
+  <div class="bar" aria-hidden="true"><span></span></div>
+  <p>The whole toolkit runs inside your browser, so the first visit downloads Python and its libraries. This can take 20 to 60 seconds; later visits are faster.</p>
+  <p><a href="../#p/gtperf">Back to the project page</a></p>
+</div>
+<div id="root"></div>
+<script type="module">
+import { mount } from "https://cdn.jsdelivr.net/npm/@stlite/browser@1.12.0/build/stlite.js";
+
+const wheel = (name) => new URL(`wheels/${name}`, location.href).href;
+const controller = mount(
+  {
+    // Pure-Python wheels the Pyodide distribution lacks are served from this site, so nothing comes from PyPI.
+    requirements: [
+      wheel("itsdangerous-2.2.0-py3-none-any.whl"),
+      wheel("python_multipart-0.0.32-py3-none-any.whl"),
+      wheel("et_xmlfile-2.0.0-py3-none-any.whl"),
+      wheel("openpyxl-3.1.5-py2.py3-none-any.whl"),
+      wheel("xlsxwriter-3.2.9-py3-none-any.whl"),
+      wheel("python_pptx-1.0.2-py3-none-any.whl"),
+      wheel("defusedxml-0.7.1-py2.py3-none-any.whl"),
+      wheel("fpdf2-2.8.9-py3-none-any.whl"),
+      wheel("gtperf-1.2.0-py3-none-any.whl"),
+      "matplotlib",
+    ],
+    entrypoint: "app.py",
+    files: {
+      "app.py": [
+        "import runpy",
+        "from pathlib import Path",
+        "import gtperf.app",
+        "runpy.run_path(str(Path(gtperf.app.__file__).with_name('ui.py')), run_name='__main__')",
+      ].join("\n"),
+    },
+    streamlitConfig: {
+      "client.toolbarMode": "viewer",
+      "theme.base": "light",
+    },
+  },
+  document.getElementById("root"),
+);
+const root = document.getElementById("root");
+new MutationObserver((_, obs) => {
+  if (root.querySelector('[data-testid="stSidebar"], [data-testid="stApp"] h1, .stException')) {
+    document.getElementById("boot").remove();
+    obs.disconnect();
+  }
+}).observe(root, { childList: true, subtree: true });
+window.gtperf = controller;
+</script>
+</body>
+</html>
