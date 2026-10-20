@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<script>(function(){var t;try{t=localStorage.getItem('theme')}catch(e){}if(t!=='light'&&t!=='dark')t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);})();</script>
+<script>(function(){var t;try{t=localStorage.getItem('theme')}catch(e){}if(t!=='light')t='dark';document.documentElement.setAttribute('data-theme',t);})();</script>
 <title>Tanishq Charde | Aerodynamics and propulsion engineer</title>
 <meta name="description" content="Engineering portfolio of Tanishq Charde: aerodynamics, CFD and gas turbine performance.">
 <meta property="og:type" content="website">
@@ -3706,12 +3706,9 @@ d.addEventListener('close',function(){o.focus();});
 </script>
 <script>
 (function(){var root=document.documentElement,b=document.getElementById('themebtn');if(!b)return;
-var mq=window.matchMedia?matchMedia('(prefers-color-scheme: dark)'):null;
 function set(t){root.setAttribute('data-theme',t);var n=t==='dark'?'light':'dark',l='Switch to '+n+' mode';b.setAttribute('aria-label',l);b.title=l;document.dispatchEvent(new Event('themechange'));}
 set(root.getAttribute('data-theme')==='dark'?'dark':'light');
 b.addEventListener('click',function(){var t=root.getAttribute('data-theme')==='dark'?'light':'dark';try{localStorage.setItem('theme',t)}catch(e){}set(t);});
-function sys(e){var s=null;try{s=localStorage.getItem('theme')}catch(x){}if(!s)set(e.matches?'dark':'light');}
-if(mq){if(mq.addEventListener)mq.addEventListener('change',sys);else if(mq.addListener)mq.addListener(sys);}
 })();
 </script>
 </body>
